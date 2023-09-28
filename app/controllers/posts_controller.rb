@@ -13,13 +13,15 @@ class PostsController < ApplicationController
   end
 
   def new
-    @user = current_user
-    @post = Post.new
+    @user = User.find(params[:user_id]) # Find the user based on the :user_id parameter
+    @post = @user.posts.build
   end
 
   def create
     @post = current_user.posts.build(post_params) 
     if @post.save
+      turbo_stream.append "posts", partial: "posts/post", locals: { post: @post }
+
       redirect_to user_post_path(current_user, @post), notice: 'Post was successfully created.'
     else
       flash.now[:alert] = 'Post could not be created. Please try again.'
