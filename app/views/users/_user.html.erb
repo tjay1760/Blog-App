@@ -3,7 +3,7 @@
 </header>
 <body>
   <div id="user"> 
-    <img id="user-image" src="https://unsplash.com/photos/F_-0BxGuVvo" alt="User Photo">
+<img id="user-image" src="<%= user.photo.html_safe %>" alt="User Photo">
     <article id="user-details">
       <h1><%= user.name %></h1>
       <p>Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
