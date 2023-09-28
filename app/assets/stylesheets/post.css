@@ -1,0 +1,60 @@
+:root {
+  --red: rgb(245, 6, 6);
+  --blue: rgb(12, 9, 228);
+}
+
+body {
+  margin: 3rem 2rem;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#user {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+#user-image {
+  min-height: 6rem;
+  min-width: 6rem;
+  border: 0.2rem solid var(--red);
+}
+
+#user-details {
+  min-height: 6rem;
+  min-width: calc(100% - 9rem);
+  border: 0.2rem solid var(--red);
+}
+
+#user-details h1 {
+  margin-left: 1rem;
+}
+
+#user-details p {
+  text-align: end;
+  margin-right: 1rem;
+}
+
+#bio {
+  min-height: 6rem;
+  border: 0.2rem solid var(--blue);
+  margin-top: 2rem;
+}
+
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--blue);
+  min-height: 2rem;
+  border: 0.2rem solid var(--blue);
+  border-radius: 5px;
+}

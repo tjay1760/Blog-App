@@ -1,37 +1,9 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Authorid:</strong>
-    <%= post.AuthorId %>
+<%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="post" id="post_<%= post.id %>">
+  post #<%= post.id %><br>
+  <%= post.text %><br>
+  <p id="comments-likes">
+    comments: <%= post.comments_counter.presence || 0 %>, 
+    Likes: <%= post.likes_counter.presence || 0 %>
   </p>
-
-  <p>
-    <strong>Title:</strong>
-    <%= post.Title %>
-  </p>
-
-  <p>
-    <strong>Text:</strong>
-    <%= post.Text %>
-  </p>
-
-  <p>
-    <strong>Createdat:</strong>
-    <%= post.CreatedAt %>
-  </p>
-
-  <p>
-    <strong>Updatedat:</strong>
-    <%= post.UpdatedAt %>
-  </p>
-
-  <p>
-    <strong>Commentscounter:</strong>
-    <%= post.CommentsCounter %>
-  </p>
-
-  <p>
-    <strong>Likescounter:</strong>
-    <%= post.LikesCounter %>
-  </p>
-
 </div>

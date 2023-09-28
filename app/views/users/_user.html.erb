@@ -1,32 +1,12 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.Name %>
-  </p>
-
-  <p>
-    <strong>Photo:</strong>
-    <%= user.Photo %>
-  </p>
-
-  <p>
-    <strong>Bio:</strong>
-    <%= user.Bio %>
-  </p>
-
-  <p>
-    <strong>Updateedat:</strong>
-    <%= user.UpdateedAt %>
-  </p>
-
-  <p>
-    <strong>Createdat:</strong>
-    <%= user.CreatedAt %>
-  </p>
-
-  <p>
-    <strong>Postscounter:</strong>
-    <%= user.PostsCounter %>
-  </p>
-
-</div>
+<header>
+  <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+</header>
+<body>
+  <div id="user"> 
+<img id="user-image" src="<%= user.photo.html_safe %>" alt="User Photo">
+    <article id="user-details">
+      <h1><%= user.name %></h1>
+      <p>Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
+    </article>
+  </div>
+</body>
