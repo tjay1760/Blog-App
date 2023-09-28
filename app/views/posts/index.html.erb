@@ -1,4 +1,9 @@
 <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+<nav class="nav">
+    <%= link_to "Add New Post", new_user_post_path(@user.id) %>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Back", :back %>
+</nav>
 <%= render @user %>
 
 <% @posts.each do |post| %>
