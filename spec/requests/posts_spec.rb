@@ -11,12 +11,12 @@ RSpec.describe 'Posts', type: :request do
 
     before(:example) { get "/users/#{user.id}/posts" }
 
-    it 'displays a list of posts' do
-      expect(response).to have_http_status(200)
-    end
-
     it 'renders the correct template' do
       expect(response).to render_template('index')
+    end
+
+    it 'displays a list of posts' do
+      expect(response).to have_http_status(200)
     end
 
     it 'includes correct placeholder text in the response body' do
@@ -44,12 +44,12 @@ RSpec.describe 'Posts', type: :request do
       get "/users/#{user.id}/posts/#{post.id}"
     end
 
-    it 'displays the post details for a given post' do
-      expect(response).to have_http_status(200)
-    end
-
     it 'renders the correct template' do
       expect(response).to render_template('show')
+    end
+
+    it 'displays the post details for a given post' do
+      expect(response).to have_http_status(200)
     end
 
     it 'includes correct placeholder text in the response body' do
