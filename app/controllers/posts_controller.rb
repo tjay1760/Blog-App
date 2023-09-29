@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = @user.posts.build(post_params)
     if @post.save
-      redirect_to user_post_path(@user, @post), notice: "Post was created for #{@user.name}"
+      redirect_to user_post_path(current_user, @post), notice: 'Post was created'
 
     else
       puts @post.errors.full_messages
