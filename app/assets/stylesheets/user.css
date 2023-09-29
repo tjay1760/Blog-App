@@ -1,3 +1,4 @@
+
 #post,
 .comments {
   border: 0.2rem solid var(--red);
@@ -12,4 +13,10 @@
 #view-post {
   text-decoration: underline;
   color: var(--red);
+}
+
+#user {
+  display: flex;
+  gap: 2%;
+  background-color: beige;
 }
