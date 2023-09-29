@@ -14,8 +14,9 @@
   text-decoration: underline;
   color: var(--red);
 }
-#user{
-  display:flex;
+
+#user {
+  display: flex;
   gap: 2%;
   background-color: beige;
 }

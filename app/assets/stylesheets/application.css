@@ -1,8 +1,8 @@
-nav{
-    display:flex;
-    justify-content: space-between;
-    height: 20px;
-    align-items: center;
-    background-color: beige;
-    padding: 1%;
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  align-items: center;
+  background-color: beige;
+  padding: 1%;
 }
