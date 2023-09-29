@@ -19,7 +19,8 @@
         <%=render comment %>
 <% end %>
 </div>
-<div class="like-comment"><%= render "comments/create" %> 
+<div class="like-comment"><%= render "comments/create", user: @user, post: @post, comment: @comment %>
+
 <%if Like.where(user_id: User.first.id, post_id: @post.id).exists?%>
  <p id= "liked">Liked<p>
 <%else%>

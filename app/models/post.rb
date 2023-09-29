@@ -5,7 +5,6 @@ class Post < ApplicationRecord
   has_many :likes
   validates :title, presence: true, length: { maximum: 250 }
 
-
   after_create :update_user_post_count
   after_create :recent_comments
 
