@@ -19,12 +19,13 @@
     <p>No posts for this user</p>
   <% end %>
   
-  <% @user.recent_posts.each do |post| %>
-    <div class="post-header">
-      <h2><%= post.title %></h2>
-    </div>
-    <%= render post %>
-  <% end %>
+<% @user.recent_posts.each do |post| %>
+  <div class="post-header">
+    <%= link_to post.title, user_post_path(@user, post), class: 'bold-link'%>
+  </div>
+  <%= render post %>
+<% end %>
+
   
   <div class="button-container">
     <button><a href="<%= user_posts_path(@user) %>">See all posts</a></button>
