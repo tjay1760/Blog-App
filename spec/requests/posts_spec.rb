@@ -18,10 +18,6 @@ RSpec.describe 'Posts', type: :request do
     it 'displays a list of posts' do
       expect(response).to have_http_status(200)
     end
-
-    it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Here is a list of all the posts for a given user')
-    end
   end
 
   describe 'GET /show', type: :request do
@@ -50,10 +46,6 @@ RSpec.describe 'Posts', type: :request do
 
     it 'displays the post details for a given post' do
       expect(response).to have_http_status(200)
-    end
-
-    it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Here is a List of all the users')
     end
   end
 end

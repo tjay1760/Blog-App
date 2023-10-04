@@ -20,10 +20,18 @@ RSpec.describe Post, type: :model do
       expect(post).to_not be_valid
     end
 
-    it 'validates that the title does not exceed 200 characters' do
-      post.title = 'A' * 201
-      expect(post).to_not be_valid
-    end
+# Assuming you have already defined `user` and `post` objects properly
+
+it 'validates that the title does not exceed 200 characters' do
+  # Attempt to set a title with more than 200 characters
+  post.title = 'A' * 201
+
+  # Expect the post to be invalid due to the title length validation
+  expect(post).to_not be_valid
+
+  # Optionally, you can also check for an error message on the specific attribute
+  expect(post.errors[:title]).to include("is too long (maximum is 200 characters)")
+end
 
     it 'validates that the comments counter is an integer' do
       post.comments_counter = 'not-an-integer'

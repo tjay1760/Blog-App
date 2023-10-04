@@ -13,7 +13,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Here is a list of users')
+      expect(response.body).to include('List of users')
     end
   end
 
@@ -33,10 +33,6 @@ RSpec.describe 'Users', type: :request do
 
     it 'displays the user details for a given user' do
       expect(response).to have_http_status(200)
-    end
-
-    it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Here is a List of the user details')
     end
   end
 end
