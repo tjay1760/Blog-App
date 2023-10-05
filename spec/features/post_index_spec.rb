@@ -34,15 +34,15 @@ RSpec.describe 'Post index ' do
   end
 
   it 'can see first comment on post ' do
-    expect(page).to have_content('comments for this post')
+    expect(page).to have_content('first comment')
   end
 
   it 'can see how many comment has' do
-    expect(page).to have_content('Comments:')
+    expect(page).to have_content('Comments: 0')
   end
 
   it ' can see how many likes a post has ' do
-    expect(page).to have_content('Likes:')
+    expect(page).to have_content('Likes: 0')
   end
 
   it 'can see section for pagination  if there are more posts than fit on the view. ' do
