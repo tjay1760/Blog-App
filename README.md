@@ -103,6 +103,11 @@ rails server
 - Twitter: [@twitterhandle](https://twitter.com/TjayPod)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/john-murianki-thiongo)
 
+👤 **Htet Wai Yan**
+
+- GitHub: [@HtetWaiYan7191](https://github.com/HtetWaiYan7191)
+- LinkedIn: [Htet Wai Yan](https://www.linkedin.com/in/htet-wai-yan19/)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - add more features
