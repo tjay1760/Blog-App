@@ -20,3 +20,8 @@
   gap: 2%;
   background-color: beige;
 }
+
+/* user.css */
+.bold-link {
+  font-weight: bold;
+}
