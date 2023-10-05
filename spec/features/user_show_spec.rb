@@ -31,6 +31,7 @@ RSpec.describe 'User show', type: :feature do
   it 'see the user first three posts ' do
     expect(page).to have_content('first post')
     expect(page).to have_content('second post')
+    expect(page).to have_content('dadd')
   end
 
   it 'see the button that let me view all users posts' do
