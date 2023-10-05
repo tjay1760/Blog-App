@@ -32,7 +32,7 @@ RSpec.describe 'Post show' do
   end
 
   it 'see the post body' do
-    expect(page).to have_content('Home')
+    expect(page).to have_content('this is my first post')
   end
 
   it 'see the username of each commentor' do
