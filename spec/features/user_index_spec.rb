@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'User index', type: :feature do
   before :each do
     @user = User.create(name: 'Tom', photo: 'https://picsum.photos/id/23/200', bio: 'web developer',
-                        posts_counter: 0)
+                        posts_counter: 8)
     visit root_path
   end
 
@@ -12,7 +12,7 @@ RSpec.describe 'User index', type: :feature do
   end
 
   it 'shows the number of posts each user has written' do
-    expect(page).to have_content('Number of posts')
+    expect(page).to have_content('Number of posts: 8')
   end
 
   it 'When I click on a user it should redirect to user/show page' do
